@@ -3,6 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🇦🇿 EEStore 🇦🇿</title>
+
+<style>
+/* BODY & ARXA FON */
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#000;
+    overflow-x:hidden;
+    color:white;
+    text-align:center;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0; left:0;
+    width:100%; 
+    height:100vh; /* tam ekran */
+    background:linear-gradient(270deg,#ff0055,#00ffcc,#ffdd00,#ff0055);
+    background-size:800% 800%;
+    z-index:-2;
+    animation:gradientMove 15s ease infinite;
+    opacity:0.2;
+}
+
+/* HEADER */
+header{
+    padding:40px 20px;
+    animation:fadeIn 2s ease-in-out;
+}
+
+h1{
+    font-size:38px;
+    color:#00ffcc;
+    text-shadow:0 0 15px #00ffcc;
+}
+
+.subtitle{
+    font-size:18px;
+    margin-top:5px;
+}
+
+/* CONTAINER */
+.container{
+    padding:20px;
+}
+
+/* CARD */
+.card{
+    background:rgba(26,26,26,0.9);
+    margin:20px auto;
+    padding:25px;
+    max-width:400px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,255,204,0.3);
+    transition:0.4s;
+    animation:slideUp 1s ease forwards;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 35px #00ffcc;
+}
+
+/* PRICE */
+.price{
+    margin-top:10px;
+    font-size:20px;
+    color:#00ffcc;
+    font-weight:bold;
+}
+
+.old{
+    text-decoration:line-through;
+    color:red;
+    margin-right:10px;
+}
+
+/* POSTER ŞƏKİLLƏRİ */
+.poster{
+    margin:30px auto;
+    max-width:90%;
+    max-height:400px; /* ekranı aşmaması üçün */
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,255,204,0.5);
+    animation:fadeIn 2s ease-in-out;
+    object-fit:cover;
+}
+
+/* DÜYMƏLƏR */
+.btn{
+    display:inline-block;
+    margin:15px 10px;
+    padding:12px 30px;
+    background:#00ffcc;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    animation:pulse 2s infinite;
+    box-shadow:0 0 10px #00ffcc;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px #00ffcc;
+}
+
+/* FOOTER */
+footer{
+    margin-top:40px;
+    padding:20px;
+    background:#0a0a0a;
+    font-size:14px;
+}
+
+footer a{
+    color:#00ffcc;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* ANİMASİYALAR */
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes slideUp{
+    from{transform:translateY(50px); opacity:0;}
+    to{transform:translateY(0); opacity:1;}
+}
+
+@keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(0,255,204,0.7);}
+    70%{box-shadow:0 0 0 15px rgba(0,255,204,0);}
+    100%{box-shadow:0 0 0 0 rgba(0,255,204,0);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇦🇿 EEStore 🇦🇿</h1>
+    <div class="subtitle">Tam güvənilir ✅</div>
+</header>
+
+<div class="container">
+
+<!-- YouTube Premium Card -->
+<div class="card">
+    <h2>YouTube Premium</h2>
+    <p>Şəxsi hesabınıza əlavə olunur + YouTube Music ✅</p>
+    <div class="price">
+        <span class="old">5₼</span> 3₼ ✅
+    </div>
+</div>
+
+<!-- Netflix Card -->
+<div class="card">
+    <h2>Netflix</h2>
+    <p>Ortaq paket</p>
+    <div class="price">5₼ ✅</div>
+    <p>Şəxsi paket</p>
+    <div class="price">9₼ ✅</div>
+    <p style="margin-top:10px;color:#00ffcc;">🎁 1-ci alana Prime Video hədiyyə!</p>
+</div>
+
+<!-- Spotify Card -->
+<div class="card">
+    <h2>Spotify</h2>
+    <p>Şok kampaniya 😱</p>
+    <p>3 aylıq sadəcə</p>
+    <div class="price">15 AZN ✅</div>
+    <p>Şəxsi hesaba aktiv edilir ✅✅</p>
+</div>
+
+<!-- Canva Card -->
+<div class="card">
+    <h2>Canva</h2>
+    <p>Ömürlük paket</p>
+    <div class="price">10 AZN ✅</div>
+</div>
+
+<!-- Düymələr -->
+<a class="btn" href="mailto:eestoreaze@gmail.com">📧 Gmail ilə Sifariş Et</a>
+<a class="btn" href="https://wa.me/994513566012">📱 WhatsApp ilə Sifariş Et</a>
+
+</div>
+
+<footer>
+Əlaqə: 
+<a href="mailto:eestoreaze@gmail.com">eestoreaze@gmail.com</a> | WhatsApp: 051 356 60 12
+</footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EEStore 🇦🇿</title>
 
 <!-- Google Fonts -->
